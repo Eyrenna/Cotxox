@@ -2,7 +2,7 @@ package cotxox;
 
 public class Carrera {
     // Atributos
-    private int tiempoEsperado = 0;
+    private int tiempoEsperadoMinutos = 0;
     private int tiempoCarrera = 0;
     private double costeTotal = 0;
     private String conductor   = "";
@@ -26,6 +26,9 @@ public class Carrera {
     public void setDistancia(double distancia) {
         this.distancia = distancia;
     }
+    public void setTiempoEsperadoMinutos(int tiempoEsperadoMinutos) {
+        this.tiempoEsperadoMinutos = tiempoEsperadoMinutos;
+    }
 
     //Métodos
 
@@ -46,6 +49,9 @@ public class Carrera {
     public double getDistancia() {
         return distancia;
     }
+     public double getTiempoEsperadoMinutos() {
+        return tiempoEsperadoMinutos;
+     }
 
     /*public double getCosteEsperado() {
         getCosteTotalEsperado()

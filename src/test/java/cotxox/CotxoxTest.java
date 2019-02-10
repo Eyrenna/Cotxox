@@ -27,6 +27,7 @@ public class CotxoxTest
         servicio.setOrigen(origen);
         servicio.setDestino(destino);
         servicio.setDistancia(distancia);
+        servicio.setTiempoEsperadoMinutos(tiempoEsperadoMinutos);
     }
 
     @Test
@@ -36,5 +37,6 @@ public class CotxoxTest
         assertEquals("Magaluf", servicio.getDestino());
         assertEquals(7.75, servicio.getDistancia(), 0.0);
         assertEquals(10.4625, Tarifa.getCosteDistancia(servicio), 0.0);
+        assertEquals(3.5, Tarifa.getCosteMinuto(servicio), 0.0);
     }
 }
