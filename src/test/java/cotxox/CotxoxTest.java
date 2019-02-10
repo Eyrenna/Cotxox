@@ -2,6 +2,7 @@ package cotxox;
 
 import static org.junit.Assert.assertEquals;
 
+import org.junit.Before;
 import org.junit.Test;
 
 /**
@@ -12,14 +13,23 @@ public class CotxoxTest
     /**
      * Rigorous Test :-)
      */
-    @Test
-    public void getTest() {
-        Carrera servicio = new Carrera("1234", "Mi casa");
-        assertEquals("1234", servicio.getTarjetaCredito());
-        assertEquals("Mi casa", servicio.getOrigen());
+    private Carrera servicio = null;
+
+    @Before
+    public void init() {
+        String tarjetaCredito = "4916119711304546";
+        String origen = "Aeroport Son Sant Joan";
+        String destino = "Magaluf";
+        double distancia = 7.75;
+        int tiempoEsperadoMinutos = 10;
+
+        servicio = new Carrera(tarjetaCredito);
+        servicio.setOrigen(origen);
     }
 
-    /*public void getOrigen () {
-        Carrera origenUser = new Carrera ("Mi casa")
-    }*/
+    @Test
+    public void getTest() {
+        assertEquals("4916119711304546", servicio.getTarjetaCredito());
+        assertEquals("Aeroport Son Sant Joan", servicio.getOrigen());
+    }
 }

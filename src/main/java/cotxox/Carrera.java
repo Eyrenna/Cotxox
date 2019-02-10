@@ -10,12 +10,18 @@ public class Carrera {
     private String origen = "";
 
     // Constructor
-    public Carrera(String tarjetaCredito, String origen) {
+    public Carrera(String tarjetaCredito) {
         this.tarjetaCredito = tarjetaCredito;
+    }
+
+    //Setes
+    public void setOrigen(String origen) {
         this.origen = origen;
     }
 
     //Métodos
+
+    //Getes
     public String getTarjetaCredito() {
         return tarjetaCredito;
 
@@ -24,5 +30,6 @@ public class Carrera {
     public String getOrigen() {
         return origen;
     }
+
 
 }
