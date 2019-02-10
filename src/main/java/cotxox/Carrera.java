@@ -9,6 +9,7 @@ public class Carrera {
     private String tarjetaCredito = "";
     private String origen = "";
     private String destino = "";
+    private double distancia = 0;
 
     // Constructor
     public Carrera(String tarjetaCredito) {
@@ -21,6 +22,9 @@ public class Carrera {
     }
     public void setDestino(String destino) {
         this.destino = destino;
+    }
+    public void setDistancia(double distancia) {
+        this.distancia = distancia;
     }
 
     //Métodos
@@ -38,6 +42,14 @@ public class Carrera {
     public String getDestino() {
         return destino;
     }
+
+    public double getDistancia() {
+        return distancia;
+    }
+
+    /*public double getCosteEsperado() {
+        getCosteTotalEsperado()
+    }*/
 
 
 }
