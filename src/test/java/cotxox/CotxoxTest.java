@@ -13,8 +13,13 @@ public class CotxoxTest
      * Rigorous Test :-)
      */
     @Test
-    public void getTarjetaCreditoTest() {
-        Carrera tarjetaUser = new Carrera("1234");
-        assertEquals("1234", tarjetaUser.getTarjetaCredito());
+    public void getTest() {
+        Carrera servicio = new Carrera("1234", "Mi casa");
+        assertEquals("1234", servicio.getTarjetaCredito());
+        assertEquals("Mi casa", servicio.getOrigen());
     }
+
+    /*public void getOrigen () {
+        Carrera origenUser = new Carrera ("Mi casa")
+    }*/
 }

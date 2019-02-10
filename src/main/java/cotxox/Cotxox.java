@@ -2,9 +2,6 @@ package cotxox;
 
 import java.util.ArrayList;
 
-import org.foobarspam.cotxox.carrera.Carrera;
-import org.foobarspam.cotxox.conductores.Conductor;
-import org.foobarspam.cotxox.conductores.PoolConductores;
 
 public class Cotxox {
 
