@@ -49,13 +49,13 @@ public class Carrera {
     public double getDistancia() {
         return distancia;
     }
-     public double getTiempoEsperadoMinutos() {
+    public double getTiempoEsperadoMinutos() {
         return tiempoEsperadoMinutos;
      }
 
-    /*public double getCosteEsperado() {
-        getCosteTotalEsperado()
-    }*/
+    public double getCosteEsperado() {
+        return Tarifa.getCosteTotalEsperado();
+    }
 
 
 }

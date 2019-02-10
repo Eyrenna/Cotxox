@@ -38,5 +38,7 @@ public class CotxoxTest
         assertEquals(7.75, servicio.getDistancia(), 0.0);
         assertEquals(10.4625, Tarifa.getCosteDistancia(servicio), 0.0);
         assertEquals(3.5, Tarifa.getCosteMinuto(servicio), 0.0);
+        assertEquals(13.9625, Tarifa.getCosteTotalEsperado(), 0.0);
+        assertEquals(13.9625, servicio.getCosteEsperado(), 0.0);
     }
 }

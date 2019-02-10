@@ -8,6 +8,7 @@ public class Tarifa {
     private int COSTEMINIMO = 5;
     private static double costeDistancia = 0;
     private static double costeMinuto = 0;
+    private static double costeTotalEsperado = 0;
 
     //Métodos
     public static double getCosteDistancia(Carrera carrera) {
@@ -16,5 +17,9 @@ public class Tarifa {
 
     public static double getCosteMinuto(Carrera carrera) {
         return costeMinuto = carrera.getTiempoEsperadoMinutos() * COSTEMINUTO;
+    }
+
+    public static double getCosteTotalEsperado() {
+        return costeTotalEsperado = costeDistancia + costeMinuto;
     }
 }
