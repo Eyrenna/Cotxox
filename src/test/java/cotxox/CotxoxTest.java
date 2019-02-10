@@ -25,11 +25,13 @@ public class CotxoxTest
 
         servicio = new Carrera(tarjetaCredito);
         servicio.setOrigen(origen);
+        servicio.setDestino(destino);
     }
 
     @Test
     public void getTest() {
         assertEquals("4916119711304546", servicio.getTarjetaCredito());
         assertEquals("Aeroport Son Sant Joan", servicio.getOrigen());
+        assertEquals("Magaluf", servicio.getDestino());
     }
 }

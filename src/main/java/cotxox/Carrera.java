@@ -8,6 +8,7 @@ public class Carrera {
     private String conductor   = "";
     private String tarjetaCredito = "";
     private String origen = "";
+    private String destino = "";
 
     // Constructor
     public Carrera(String tarjetaCredito) {
@@ -17,6 +18,9 @@ public class Carrera {
     //Setes
     public void setOrigen(String origen) {
         this.origen = origen;
+    }
+    public void setDestino(String destino) {
+        this.destino = destino;
     }
 
     //Métodos
@@ -29,6 +33,10 @@ public class Carrera {
 
     public String getOrigen() {
         return origen;
+    }
+
+    public String getDestino() {
+        return destino;
     }
 
 
