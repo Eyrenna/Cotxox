@@ -6,10 +6,13 @@ public class Carrera {
     private int tiempoCarrera = 0;
     private double costeTotal = 0;
     private String conductor   = "";
+
     private String tarjetaCredito = "";
     private String origen = "";
     private String destino = "";
     private double distancia = 0;
+
+    private double costeTotalEsperado = 0;
 
     // Constructor
     public Carrera(String tarjetaCredito) {
@@ -53,9 +56,13 @@ public class Carrera {
         return tiempoEsperadoMinutos;
      }
 
-    /*public double getCosteEsperado() {
-        return Tarifa.getCosteTotalEsperado();
-    }*/
+    public double getCosteEsperado() {
+        costeTotalEsperado = Tarifa.getCosteTotalEsperado(this);
+        if (costeTotalEsperado > 5.0)
+            return costeTotalEsperado;
+        else
+            return Tarifa.getCosteMinimo();
+    }
 
 
 }

@@ -14,6 +14,7 @@ public class CotxoxTest
      * Rigorous Test :-)
      */
     private Carrera servicio = null;
+    private Carrera servMin = null;
 
     @Before
     public void init() {
@@ -28,6 +29,15 @@ public class CotxoxTest
         servicio.setDestino(destino);
         servicio.setDistancia(distancia);
         servicio.setTiempoEsperadoMinutos(tiempoEsperadoMinutos);
+
+        double distanciaMinima = 1.2;
+        int tiempoEsperadoMinMinimo = 1;
+
+        servMin = new Carrera(tarjetaCredito);
+        servMin.setDistancia(distanciaMinima);
+        servMin.setTiempoEsperadoMinutos(tiempoEsperadoMinMinimo);
+
+
     }
 
     @Test
@@ -39,6 +49,12 @@ public class CotxoxTest
         assertEquals(10.4625, Tarifa.getCosteDistancia(servicio), 0.0);
         assertEquals(3.5, Tarifa.getCosteMinuto(servicio), 0.0);
         assertEquals(13.9625, Tarifa.getCosteTotalEsperado(servicio), 0.0);
-        //assertEquals(13.9625, servicio.getCosteEsperado(), 0.0);
+        assertEquals(13.9625, servicio.getCosteEsperado(), 0.0);
+    }
+
+    @Test
+    public void logicaTest() {
+        assertEquals(13.9625, servicio.getCosteEsperado(), 0.0);
+        assertEquals(5.0, servMin.getCosteEsperado(), 0.0);
     }
 }
