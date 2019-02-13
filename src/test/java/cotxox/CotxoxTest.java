@@ -57,4 +57,10 @@ public class CotxoxTest
         assertEquals(13.9625, servicio.getCosteEsperado(), 0.0);
         assertEquals(5.0, servMin.getCosteEsperado(), 0.0);
     }
+
+    @Test
+    public void pagoTest() {
+        assertEquals(13.9625, servicio.getCosteTotal(), 0.0);
+        assertEquals(5.0, servMin.getCosteTotal(), 0.0);
+    }
 }

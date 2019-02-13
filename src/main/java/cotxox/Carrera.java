@@ -61,7 +61,17 @@ public class Carrera {
         if (costeTotalEsperado > 5.0)
             return costeTotalEsperado;
         else
-            return Tarifa.getCosteMinimo();
+            costeTotalEsperado = Tarifa.getCosteMinimo();
+            return costeTotalEsperado;
+    }
+
+    public void recibirPago() {
+        this.costeTotal = getCosteEsperado();
+    }
+
+    public double getCosteTotal() {
+        recibirPago();
+        return this.costeTotal;
     }
 
 
