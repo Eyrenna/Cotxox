@@ -53,9 +53,9 @@ public class Carrera {
         return tiempoEsperadoMinutos;
      }
 
-    public double getCosteEsperado() {
+    /*public double getCosteEsperado() {
         return Tarifa.getCosteTotalEsperado();
-    }
+    }*/
 
 
 }

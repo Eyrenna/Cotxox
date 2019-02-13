@@ -19,7 +19,7 @@ public class Tarifa {
         return costeMinuto = carrera.getTiempoEsperadoMinutos() * COSTEMINUTO;
     }
 
-    public static double getCosteTotalEsperado() {
-        return costeTotalEsperado = costeDistancia + costeMinuto;
+    public static double getCosteTotalEsperado(Carrera carrera) {
+        return costeTotalEsperado = getCosteDistancia(carrera) + getCosteMinuto(carrera);
     }
 }
