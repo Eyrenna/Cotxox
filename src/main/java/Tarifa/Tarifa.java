@@ -1,4 +1,6 @@
-package cotxox;
+package Tarifa;
+
+import Carrera.Carrera;
 
 public class Tarifa {
 

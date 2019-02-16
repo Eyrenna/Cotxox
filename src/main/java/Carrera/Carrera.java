@@ -1,4 +1,6 @@
-package cotxox;
+package Carrera;
+
+import Tarifa.Tarifa;
 
 public class Carrera {
     // Atributos
@@ -13,6 +15,8 @@ public class Carrera {
     private double distancia = 0;
 
     private double costeTotalEsperado = 0;
+
+    private double propina = 0;
 
     // Constructor
     public Carrera(String tarjetaCredito) {
@@ -32,6 +36,10 @@ public class Carrera {
     public void setTiempoEsperadoMinutos(int tiempoEsperadoMinutos) {
         this.tiempoEsperadoMinutos = tiempoEsperadoMinutos;
     }
+    public void setPropina(double propina) {
+        this.propina = propina;
+    }
+
 
     //Métodos
 
@@ -64,14 +72,21 @@ public class Carrera {
             costeTotalEsperado = Tarifa.getCosteMinimo();
             return costeTotalEsperado;
     }
+    public double getPropina() {
+        return propina;
+    }
 
-    public void recibirPago() {
+    public void realizarPago() {
         this.costeTotal = getCosteEsperado();
     }
 
     public double getCosteTotal() {
-        recibirPago();
+        realizarPago();
         return this.costeTotal;
+    }
+
+    public void recibirPropina(double propina) {
+        setPropina(propina);
     }
 
 

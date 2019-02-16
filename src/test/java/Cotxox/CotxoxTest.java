@@ -1,7 +1,9 @@
-package cotxox;
+package Cotxox;
 
 import static org.junit.Assert.assertEquals;
 
+import Carrera.Carrera;
+import Tarifa.Tarifa;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,6 +32,7 @@ public class CotxoxTest
         servicio.setDistancia(distancia);
         servicio.setTiempoEsperadoMinutos(tiempoEsperadoMinutos);
 
+
         double distanciaMinima = 1.2;
         int tiempoEsperadoMinMinimo = 1;
 
@@ -37,6 +40,9 @@ public class CotxoxTest
         servMin.setDistancia(distanciaMinima);
         servMin.setTiempoEsperadoMinutos(tiempoEsperadoMinMinimo);
 
+        double propina = 2.25;
+
+        servicio.setPropina(propina);
 
     }
 
@@ -62,5 +68,10 @@ public class CotxoxTest
     public void pagoTest() {
         assertEquals(13.9625, servicio.getCosteTotal(), 0.0);
         assertEquals(5.0, servMin.getCosteTotal(), 0.0);
+    }
+
+    @Test
+    public void recibirPropina() {
+        assertEquals(2.25, servicio.getPropina(), 0.0);
     }
 }

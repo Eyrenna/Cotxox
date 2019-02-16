@@ -1,4 +1,4 @@
-package cotxox;
+package PoolConductores;
 
 public class PoolConductores {
 }

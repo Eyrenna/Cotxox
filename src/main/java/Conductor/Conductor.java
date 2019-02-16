@@ -1,4 +1,4 @@
-package cotxox;
+package Conductor;
 
 public class Conductor {
 }

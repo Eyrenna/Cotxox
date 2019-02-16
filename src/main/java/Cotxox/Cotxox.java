@@ -1,4 +1,7 @@
-package cotxox;
+package Cotxox;
+
+import Carrera.Carrera;
+import Conductor.Conductor;
 
 import java.util.ArrayList;
 
@@ -23,7 +26,7 @@ public class Cotxox {
         carrera.setOrigen(origen);
         carrera.setDestino(destino);
         carrera.setDistancia(distancia);
-        carrera.setTiempoEsperado(tiempoEsperadoMinutos);
+       // carrera.setTiempoEsperado(tiempoEsperadoMinutos);
 
         System.out.println("\n#####" + "\t Set Pickup: \t" + "#####\n");
 
@@ -53,7 +56,7 @@ public class Cotxox {
         // creamos objetos conductor y los metemos en el array
 
         String[] nombres = { "Samantha", "Fox", "Mola" };
-        for (String nombre : nombres) {
+        /* for (String nombre : nombres) {
             conductor = new Conductor(nombre);
             poolConductores.add(conductor);
         }
@@ -73,9 +76,9 @@ public class Cotxox {
 
         // Creamos el objeto flota de conductores, de la clase PoolConductores.
 
-        PoolConductores conductores = new PoolConductores(poolConductores);
+        PoolConductores conductores = new PoolConductores(poolConductores); */
 
-        /* Seleccion del conductor en la flota y asignacion a la carrera */
+        /* Seleccion del conductor en la flota y asignacion a la carrera
 
         carrera.asignarConductor(conductores);
 
@@ -113,6 +116,6 @@ public class Cotxox {
         carrera.getConductor().setValoracion((byte) 5);
 
         System.out.println("Driver: " + carrera.getConductor().getNombre());
-        System.out.println("Stars: " + carrera.getConductor().getValoracion());
+        System.out.println("Stars: " + carrera.getConductor().getValoracion()); */
     }
 }
