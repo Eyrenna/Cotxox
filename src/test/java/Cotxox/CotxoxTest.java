@@ -30,7 +30,7 @@ public class CotxoxTest
         servicio.setOrigen(origen);
         servicio.setDestino(destino);
         servicio.setDistancia(distancia);
-        servicio.setTiempoEsperadoMinutos(tiempoEsperadoMinutos);
+        servicio.setTiempoEsperado(tiempoEsperadoMinutos);
 
 
         double distanciaMinima = 1.2;
@@ -38,7 +38,7 @@ public class CotxoxTest
 
         servMin = new Carrera(tarjetaCredito);
         servMin.setDistancia(distanciaMinima);
-        servMin.setTiempoEsperadoMinutos(tiempoEsperadoMinMinimo);
+        servMin.setTiempoEsperado(tiempoEsperadoMinMinimo);
 
         double propina = 2.25;
 

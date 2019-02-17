@@ -9,9 +9,9 @@ public class Tarifa {
     private static double COSTEMINUTO = 0.35;
     private static double COSTEMINIMO = 5.0;
 
-    private static double costeDistancia = 0;
-    private static double costeMinuto = 0;
-    private static double costeTotalEsperado = 0;
+    private static double costeDistancia = 0d;
+    private static double costeMinuto = 0d;
+    private static double costeTotalEsperado = 0d;
 
     //Métodos
     public static double getCosteDistancia(Carrera carrera) {

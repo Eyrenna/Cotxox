@@ -1,22 +1,24 @@
 package Carrera;
 
+import PoolConductores.PoolConductores;
 import Tarifa.Tarifa;
+import Conductor.Conductor;
 
 public class Carrera {
     // Atributos
     private int tiempoEsperadoMinutos = 0;
     private int tiempoCarrera = 0;
-    private double costeTotal = 0;
-    private String conductor   = "";
+    private double costeTotal = 0d;
+    private Conductor conductor = null;
 
     private String tarjetaCredito = "";
     private String origen = "";
     private String destino = "";
-    private double distancia = 0;
+    private double distancia = 0d;
 
-    private double costeTotalEsperado = 0;
+    private double costeTotalEsperado = 0d;
 
-    private double propina = 0;
+    private double propina = 0d;
 
     // Constructor
     public Carrera(String tarjetaCredito) {
@@ -33,11 +35,14 @@ public class Carrera {
     public void setDistancia(double distancia) {
         this.distancia = distancia;
     }
-    public void setTiempoEsperadoMinutos(int tiempoEsperadoMinutos) {
+    public void setTiempoEsperado(int tiempoEsperadoMinutos) {
         this.tiempoEsperadoMinutos = tiempoEsperadoMinutos;
     }
     public void setPropina(double propina) {
         this.propina = propina;
+    }
+    public void setConductor(Conductor conductor) {
+        this.conductor = conductor;
     }
 
 
@@ -89,5 +94,12 @@ public class Carrera {
         setPropina(propina);
     }
 
+    public Conductor getConductor() {
+        return this.conductor;
+    }
 
+    public void asignarConductor(PoolConductores conductor) {
+        setConductor(conductor.asignarConductor());
+
+    }
 }
